@@ -1,7 +1,7 @@
 {
-  "name": "esbuild_bundler_starter_sinuos_jsx",
+  "name": "esbuild_radio_player_sinuos_jsx",
   "version": "1.0.0",
-  "description": "esbuild bundler starter with sinuos.jsx",
+  "description": "esbuild radio player with sinuos.jsx",
   "main": "index.js",
   "scripts": {
     "build": "esbuild --bundle --minify --loader:.js=jsx index.js --outfile=dist/bundle.js",
