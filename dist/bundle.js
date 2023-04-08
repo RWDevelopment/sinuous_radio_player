@@ -39,13 +39,3 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         </details>
     </article>`;return y`
     <main class="container"><${s}/></main>`};document.body.append(y`<${se}/>`);var h=document.querySelector("audio");h.volume=vol();})();
-/*!
- * shuffle-letters
- * A JavaScript library to shuffle the text content of a DOM element with an animated effect.
- *
- * @version v1.0.2
- * @author George Raptis <georapbox@gmail.com>
- * @homepage https://github.com/georapbox/shuffle-letters#readme
- * @repository git+https://github.com/georapbox/shuffle-letters.git
- * @license MIT
- */
