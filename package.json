@@ -1,0 +1,19 @@
+{
+  "name": "esbuild_bundler_starter_sinuos_jsx",
+  "version": "1.0.0",
+  "description": "esbuild bundler starter with sinuos.jsx",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild --bundle --minify --loader:.js=jsx index.js --outfile=dist/bundle.js",
+    "watch": "esbuild --bundle --minify --loader:.js=jsx --watch index.js --outfile=dist/bundle.js",
+    "serve": "npm run build -- --servedir=dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@picocss/pico": "^1.5.6",
+    "esbuild": "^0.14.23",
+    "shuffle-letters": "^1.0.2",
+    "sinuous": "^0.29.0"
+  }
+}
