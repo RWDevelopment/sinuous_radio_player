@@ -5,5 +5,5 @@ simple, fast, reactive radio player made with esbuild, sinuous jsx library, shuf
 
 ![Radio Player](screen.webp)
 
-windows:
+windows:  
 download -> npm install -> build_distro.bat or build_distro_purge.bat
