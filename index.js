@@ -16,7 +16,7 @@ const App = () => {
 
     let isLight = true,
         theme = o('light');
-        playBtnText = o(Play),
+        playBtn = o(Play),
         source = o(stations[0].stream),
         station = o(stations[0].name),
         vol = o(.25),
@@ -78,10 +78,10 @@ const App = () => {
 
         if(player.paused) {
 
-            player.readyState < 2 ? anim(loading) : null;
+            player.readyState < 2 ? anim(loading) : anim(null);
             player.play();
             player.onplaying = () => {
-                playBtnText(Pause);
+                playBtn(Pause);
                 player.volume > 0.01 ? anim(PlayAnim) : anim(null);
             }
             
@@ -89,7 +89,7 @@ const App = () => {
 
             player.pause();
             player.onpause = () => {
-                playBtnText(Play);
+                playBtn(Play);
                 anim(null);
             }
 
@@ -97,26 +97,9 @@ const App = () => {
 
     }
 
-    const radio = html`
-    <article>
-        <nav><ul><li><a href="#" onclick=${playRadio}>${playBtnText}</a></li><li><strong>${station}</strong></li>${anim}</ul><ul><li><a href="#" onclick=${toggleTheme}>${icon}</a></li></ul></nav>
-        <audio src=${source} preload="none"/>
-        <input type="range" min="0.00" max="1.00" step=".01" value=${vol} oninput=${changeVolume} onchange=${changeAnim} id="volume" name="volume" data-tooltip="vol.${showVol} %" />
-        <details>
-        <summary>stations</summary>
-        <section>
-        <ul>
-            ${() => stations.map(s =>
-                html`<li><a href="#" data-source="${s.stream}" data-name="${s.name}" onclick=${changeStation}>${s.name}</a> <sup><mark>${s.category}</mark></sup></li>`
-            )}
-        </ul>
-        </section>
-        <label>volume ${showVol} %</label>
-        </details>
-    </article>`;
+    const radio = html`<article><nav><ul><li><a href="#" onclick=${playRadio} data-play>${playBtn}</a></li><li><strong>${station}</strong></li>${anim}</ul><ul><li><a href="#" onclick=${toggleTheme}>${icon}</a></li></ul></nav><audio src=${source} preload="none"/><input type="range" min="0.00" max="1.00" step=".01" value=${vol} oninput=${changeVolume} onchange=${changeAnim} id="volume" name="volume" data-tooltip="vol.${showVol} %" /><details><summary>stations</summary><section><ul>${() => stations.map(s => html`<li><a href="#" data-source="${s.stream}" data-name="${s.name}" onclick=${changeStation}>${s.name}</a> <sup><mark>${s.category}</mark></sup></li>`)}</ul></section><label>volume ${showVol} %</label></details></article>`;
 
-    const view = html`
-    <main class="container"><${radio}/></main>`;
+    const view = html`<main class="container"><${radio}/></main>`;
     return view;
 
 };
