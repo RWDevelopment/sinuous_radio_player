@@ -1,12 +1,13 @@
 {
-  "name": "esbuild_radio_player_sinuos_jsx",
+  "name": "esbuild_bundler_starter_sinuos_jsx",
   "version": "1.0.0",
-  "description": "esbuild radio player with sinuos.jsx",
+  "description": "esbuild bundler starter with sinuos.jsx",
   "main": "index.js",
   "scripts": {
     "build": "esbuild --bundle --minify --loader:.js=jsx index.js --outfile=dist/bundle.js",
     "watch": "esbuild --bundle --minify --loader:.js=jsx --watch index.js --outfile=dist/bundle.js",
-    "serve": "npm run build -- --servedir=dist"
+    "serve": "npm run build -- --servedir=dist",
+    "build_purge": "node build.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,8 @@
     "esbuild": "^0.14.23",
     "shuffle-letters": "^1.0.2",
     "sinuous": "^0.29.0"
+  },
+  "devDependencies": {
+    "esbuild-plugin-purgecss": "^0.0.6"
   }
 }
