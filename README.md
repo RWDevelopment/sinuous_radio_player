@@ -4,3 +4,5 @@ simple, fast, reactive radio player made with esbuild, sinuous jsx library, shuf
 <a href="https://rwdevelopment.github.io/sinuous_radio_player" target="_blank">Live demo</a>
 
 ![Radio Player](screen.webp)
+
+download -> npm install -> build_distro.bat or build_distro_purge.bat
