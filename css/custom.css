@@ -6,10 +6,28 @@ ul li a {
   background: transparent;
   text-decoration: none;
 }
+nav ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 nav li a svg {
   width: var(--font-size);
   height: var(--font-size);
   fill: currentColor;
+  margin: auto;
+}
+nav li a[data-play=true] svg {
+  width: calc(var(--font-size)*1.5);
+  height: calc(var(--font-size)*1.5);
+}
+nav li a[data-play=true] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--muted-border-color);
+  border-radius: calc(var(--border-radius)*1.75);
+  margin: 0 var(--spacing);
 }
 body > main > article {
   font-family: var(--font-mono);
@@ -27,8 +45,10 @@ li mark {
 }
 strong {
   font-family: var(--font-family);
-  font-weight: 400;
+  font-weight: 600;
   font-size: calc(var(--font-size)*.9);
+  display: inline-block;
+  height: 100%;
 }
 label, mark, details, [data-tooltip]:before {
   font-size: calc(var(--font-size)*.75);
@@ -54,6 +74,8 @@ details section ul li {
 
 span[aria-busy=true] {
   color:var(--primary);
+  font-size: calc(var(--font-size)*.8);
+  line-height: calc(var(--font-size)*.8);
 }
 
 ::-webkit-scrollbar {
