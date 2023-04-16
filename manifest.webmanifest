@@ -2,8 +2,8 @@
     "theme_color": "#f69435",
     "background_color": "#f69435",
     "display": "standalone",
-    "scope": "/sinuous_radio_player/",
-    "start_url": "/sinuous_radio_player/",
+    "scope": "/",
+    "start_url": "/",
     "name": "Radio Sinuos Player",
     "short_name": "RSP",
     "icons": [
