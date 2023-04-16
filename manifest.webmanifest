@@ -8,22 +8,22 @@
     "short_name": "RSP",
     "icons": [
         {
-            "src": "sinuous_radio_player/isc/icon-192x192.png",
+            "src": "/isc/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "sinuous_radio_player/ics/icon-256x256.png",
+            "src": "/ics/icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "sinuous_radio_player/ics/icon-384x384.png",
+            "src": "/ics/icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "sinuous_radio_player/ics/icon-512x512.png",
+            "src": "/ics/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
